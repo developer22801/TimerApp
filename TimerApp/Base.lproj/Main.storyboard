@@ -1,24 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ah4-eD-gzu">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Exercises View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateExercisesViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-vY-OJf">
+                                <rect key="frame" x="114" y="384.66666666666669" width="165" height="82.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-xP-rro">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="37.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Create new set" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="createNewSetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecv-NG-u2Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlU-ec-axn">
+                                        <rect key="frame" x="0.0" y="45.333333333333314" width="165" height="37.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start new set" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startNewSet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGW-Vb-ZYI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXH-NH-XOe">
+                                <rect key="frame" x="311.66666666666669" y="125" width="41.333333333333314" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💪" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjd-cC-iB2">
+                                <rect key="frame" x="62" y="636" width="45" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TD-C5-Im1">
+                                <rect key="frame" x="124.66666666666669" y="103" width="144" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="line.diagonal.arrow" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QNJ-7N-Y1C">
+                                <rect key="frame" x="81" y="495" width="50" height="48"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-6p-0SO">
+                                <rect key="frame" x="86" y="550.66666666666663" width="35.333333333333343" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cqC-vY-OJf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0db-xB-HWc"/>
+                            <constraint firstItem="pjd-cC-iB2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="5EE-BK-9ct"/>
+                            <constraint firstItem="fXH-NH-XOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="AGG-at-ZDx"/>
+                            <constraint firstItem="fXH-NH-XOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="311.66666666666669" id="ES2-Ln-FeJ"/>
+                            <constraint firstItem="cOe-6p-0SO" firstAttribute="top" secondItem="QNJ-7N-Y1C" secondAttribute="bottom" constant="5" id="GcH-Fg-Q3B"/>
+                            <constraint firstItem="1TD-C5-Im1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ih1-QD-gTF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXH-NH-XOe" secondAttribute="trailing" constant="40" id="MKv-s6-RTM"/>
+                            <constraint firstItem="pjd-cC-iB2" firstAttribute="top" secondItem="cOe-6p-0SO" secondAttribute="bottom" constant="65" id="WNx-rC-AEQ"/>
+                            <constraint firstItem="cqC-vY-OJf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zns-ma-5Qg"/>
+                            <constraint firstItem="cOe-6p-0SO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="dZF-Op-MVa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjd-cC-iB2" secondAttribute="bottom" constant="134" id="iCm-EZ-P4f"/>
+                            <constraint firstItem="QNJ-7N-Y1C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="lUl-MO-KKO"/>
+                            <constraint firstItem="1TD-C5-Im1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zYY-ne-gvy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WDc-wu-vE4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="12.67605633802817"/>
+        </scene>
+        <!--Exercise View Controller-->
+        <scene sceneID="gVm-TJ-SxU">
+            <objects>
+                <viewController storyboardIdentifier="startExercise" id="4Gf-EK-Z6M" customClass="ExerciseViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N6y-9I-btb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="35B-BK-Ub5">
+                                <rect key="frame" x="0.0" y="276" width="393" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="542" id="NmM-Wt-pY8"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cak-ro-O15" customClass="ExerciseTableViewCell" customModule="TimerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cak-ro-O15" id="vcY-S0-aQf">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu3-2l-vkp">
+                                <rect key="frame" x="110.66666666666667" y="202.66666666666666" width="171.66666666666663" height="37.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Exercises" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startExerciseButtonTapped:" destination="4Gf-EK-Z6M" eventType="touchDown" id="K2H-qW-O1X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yP0-aW-8q7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="bottom" secondItem="yP0-aW-8q7" secondAttribute="bottom" id="KnH-V8-yU1"/>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="centerX" secondItem="N6y-9I-btb" secondAttribute="centerX" id="WCL-vn-BHf"/>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="top" secondItem="gu3-2l-vkp" secondAttribute="bottom" constant="36" id="WSt-fy-Lg1"/>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="centerX" secondItem="gu3-2l-vkp" secondAttribute="centerX" id="Y9r-vb-ItK"/>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="leading" secondItem="yP0-aW-8q7" secondAttribute="leading" id="d4s-W5-wHa"/>
+                            <constraint firstItem="35B-BK-Ub5" firstAttribute="trailing" secondItem="yP0-aW-8q7" secondAttribute="trailing" id="sES-Gd-m6c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exercisesTableView" destination="35B-BK-Ub5" id="co9-mo-hxr"/>
+                        <outlet property="startExercises" destination="gu3-2l-vkp" id="IOC-PM-Y9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCz-ON-qaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713.740458015267" y="12.67605633802817"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kfa-5o-KGl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ah4-eD-gzu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9gw-jR-L6h">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bSG-nh-Yob"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1u4-Nf-hRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="line.diagonal.arrow" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
